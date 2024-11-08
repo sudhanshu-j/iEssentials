@@ -61,9 +61,8 @@ iEssentials is a sleek and modern Apple clone website built using HTML, CSS, Jav
 
 - **ScrollReveal.js**: Library used for scroll animations to make the website more engaging as the user scrolls.
 
-- **Three.js** (if used for 3D modeling): A JavaScript library for creating and displaying animated 3D computer graphics in the web browser.
-
 ---
+
 
 ## Setup and Installation
 
@@ -111,6 +110,22 @@ To run this project locally, follow these steps:
 
 6. **Footer Section**
    - Contains footer links, credits, and other relevant information.
+
+## Usage
+
+### 3D Box Control
+
+- The main interactive feature is the 3D iPhone box in the first section.
+
+- Users can rotate the box by clicking on control buttons, which adjust the box angle on the X, Y, and Z axes.
+
+### Navigation
+
+- Use the top navigation to jump between product sections, including the iPhone, MacBook, Watch, and AirPods sections.
+
+### Scroll Animation
+
+- Scroll through the website to activate animations that reveal content as you move down each section.
 
 ## ScrollReveal Animations
 
