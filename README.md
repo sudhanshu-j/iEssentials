@@ -88,31 +88,34 @@ To run this project locally, follow these steps:
        ```
      - **Navigate to http://localhost:8000 in your browser.**
     
-```
-
 ## Features Breakdown
 
 1. **3D iPhone Box Model**
-   - A 3D model of an iPhone box rotates automatically and can be controlled by the user.
-   - The user can adjust the rotation angle to any degree using UI controls (such as buttons or sliders).
 
-2. **New iPhone Series Section**
+   - A 3D model of an iPhone box rotates automatically and can be controlled by the user.
+
+    - The user can adjust the rotation angle to any degree using UI controls (such as buttons or sliders).
+
+3. **New iPhone Series Section**
    - A visually appealing display of the latest iPhone models, designed with responsive images and clean typography.
 
-3. **MacBook Animation**
+4. **MacBook Animation**
+
    - A loading effect is applied to the MacBook image, combined with animations that trigger when scrolling to this section.
+
    - This section is animated using CSS and JavaScript to provide a smooth, engaging visual effect.
 
-4. **Apple Watch Section**
+6. **Apple Watch Section**
+
    - A dedicated section to showcase Apple Watches, with images and animations that bring the product to life on the page.
 
-5. **AirPods Section**
+8. **AirPods Section**
+
    - Displays images and descriptions of the latest AirPods, presented with smooth animations as the user scrolls through the website.
 
-6. **Footer Section**
+10. **Footer Section**
+   
    - Contains footer links, credits, and other relevant information.
-
-```
 
 ## Usage
 
@@ -149,15 +152,19 @@ You can customize the animations by editing the ScrollReveal configuration in th
 You can easily customize this website to fit your needs. Here are some of the key areas you might want to modify:
 
 ### 1. 3D iPhone Model:
+
 - You can replace the 3D model with a different object or update the textures by modifying the Three.js code (if used).
 
 ### 2. Section Content:
+
 - Update the images, text, and other media for the different product sections (iPhone, MacBook, Apple Watch, AirPods).
 
 ### 3. Animations:
+
 - You can tweak the ScrollReveal animations by adjusting the configuration (duration, delay, easing, etc.).
 
 ### 4. Styling:
+
 - Modify the CSS styles to fit your branding and layout preferences.
 
 ## Contributing
