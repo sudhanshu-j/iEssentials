@@ -207,14 +207,14 @@ If you would like to contribute to this project, feel free to fork the repositor
 ## Project Structure
    ```bash
    iEssentials/
-   ├── images/                   # Images for products and icons
+   ├── images/                  # Images for products and icons
    ├── css/
-   │   └── styles.css            # Main stylesheet
+   │   └── style.css            # Main stylesheet
    ├── js/
-   │   └── main.js               # JavaScript for interactivity and 3D controls
+   │   └── script.js             # JavaScript for interactivity and 3D controls
    ├── index.html                # Main HTML file
    └── README.md                 # Project README file
-```
+   ```
 
 ## Contact
 
