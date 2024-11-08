@@ -15,11 +15,17 @@ iEssentials is a sleek and modern Apple clone website built using HTML, CSS, Jav
 
 - [Usage](#usage)
 
+- [ScrollReveal Animations](#scrollreveal-animations)
+
+- [Customizing](#customizing)
+
+- [Contributing](#contributing)
+
+- [Acknowledgements](#acknowledgements)
+
 - [Project Structure](#project-structure)
 
-- [Credits](#credits)
-
-- [License](#license)
+- [Contact](#contact)
 
 ---
 
@@ -212,4 +218,4 @@ If you would like to contribute to this project, feel free to fork the repositor
 
 ## Contact
 
-For questions or feedback, feel free to open an issue on this GitHub repository or contact me directly via my [GitHub profile](https://github.com/your-username).
+For questions or feedback, feel free to open an issue on this GitHub repository or contact me directly via my [GitHub profile](https://github.com/sudhanshu-j).
