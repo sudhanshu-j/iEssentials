@@ -63,7 +63,6 @@ iEssentials is a sleek and modern Apple clone website built using HTML, CSS, Jav
 
 ---
 
-
 ## Setup and Installation
 
 To run this project locally, follow these steps:
@@ -88,6 +87,8 @@ To run this project locally, follow these steps:
        python -m http.server
        ```
      - **Navigate to http://localhost:8000 in your browser.**
+    
+```
 
 ## Features Breakdown
 
@@ -110,6 +111,8 @@ To run this project locally, follow these steps:
 
 6. **Footer Section**
    - Contains footer links, credits, and other relevant information.
+
+```
 
 ## Usage
 
