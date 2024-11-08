@@ -198,7 +198,7 @@ If you would like to contribute to this project, feel free to fork the repositor
 
 ## Acknowledgements
 
-- **ScrollReveal.js:** [ScrollReveal](https://scrollrevealjs.org/)
+- **ScrollReveal.js:** [ScrollReveal](https://github.com/jlmakes/scrollreveal)
 
 - **Icons:** Icons used in the project are sourced from [FontAwesome](https://fontawesome.com/) or similar icon libraries.
 
