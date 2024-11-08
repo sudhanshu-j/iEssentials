@@ -1275,6 +1275,17 @@ html {
   .icon-link {
     margin: 0 2rem;
   }
+
+  /* Adjust position of the scroll up button */
+  .scrollup {
+    bottom: 3rem;
+    right: 15%;
+  }
+
+  /* Adjust the size of the copyright text */
+  .copyright {
+    bottom: 15%;
+  }
 }
 
 /* For screen widths up to 550px */
@@ -1375,9 +1386,25 @@ html {
     right: 5%;
   }
 
+  .section-5-heading {
+    left: 50%;
+  }
+
   /* Adjust icon link image size */
   .icon-link img {
     width: 6rem;
+  }
+
+  .icon-link .icon-1 {
+    width: 8rem;
+  }
+
+  .icon-link .icon-3 {
+    width: 9rem;
+  }
+
+  .icon-link .icon-5 {
+    width: 8rem;
   }
 }
 
