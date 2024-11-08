@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Specifies the character encoding for the document (UTF-8) to support all characters. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures the webpage is responsive and scales correctly on all devices (mobile, tablet, etc.). -->
+
+    <title>Apple Store</title>
+    <!-- Defines the title of the webpage that appears in the browser tab. -->
+
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <!-- Specifies the favicon (the small icon displayed on the browser tab) for the website. -->
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Links the external CSS file (style.css) to apply styles to the webpage. -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- Links to the Font Awesome library for using pre-designed icons on the website. -->
+  </head>
+  <body>
+    <!-- Main container -->
+    <div class="container">
+      <!-- Section 1: Header and interactive cube area -->
+      <section class="section-1" id="section-1">
+        <!-- Logo linking to homepage -->
+        <a href="#" class="logo">
+          <i class="fa-brands fa-apple"></i>
+          <!-- Apple icon for logo -->
+        </a>
+
+        <!-- Navbar with links to product sections -->
+        <nav class="navbar">
+          <a href="#section-2" class="navbar-link">iPhone 16</a>
+          <!-- Link to iPhone 16 section -->
+          <a href="#section-3" class="navbar-link">MacBook Air</a>
+          <!-- Link to MacBook Air section -->
+          <a href="#section-4" class="navbar-link">Watch</a>
+          <!-- Link to Watch section -->
+          <a href="#section-5" class="navbar-link">AirPods</a>
+          <!-- Link to AirPods section -->
+        </nav>
+
+        <!-- Cube wrapper for holding the 3D rotating cube -->
+        <div class="cube-wrapper">
+          <div class="cube">
+            <!-- Cube element for rotation -->
+            <div class="front-side">
+              <img src="img.png" />
+              <!-- Front face image of iPhone -->
+            </div>
+            <div class="back-side center">
+              <i class="fa-brands fa-apple"></i>
+              <!-- Back face Apple icon -->
+            </div>
+          </div>
+
+          <!-- Controls for rotating the cube -->
+          <div class="controls">
+            <a href="#" class="top-x-control controls-a">
+              <i class="fa-solid fa-chevron-up"></i>
+              <!-- Rotate cube up on X-axis -->
+            </a>
+            <a href="#" class="bottom-x-control controls-a">
+              <i class="fa-solid fa-chevron-down"></i>
+              <!-- Rotate cube down on X-axis -->
+            </a>
+            <a href="#" class="left-y-control controls-a">
+              <i class="fa-solid fa-chevron-left"></i>
+              <!-- Rotate cube left on Y-axis -->
+            </a>
+            <a href="#" class="right-y-control controls-a">
+              <i class="fa-solid fa-chevron-right"></i>
+              <!-- Rotate cube right on Y-axis -->
+            </a>
+            <a href="#" class="top-z-control controls-a">
+              <i class="fa-solid fa-chevron-down"></i>
+              <!-- Rotate cube down on Z-axis -->
+            </a>
+            <a href="#" class="bottom-z-control controls-a">
+              <i class="fa-solid fa-chevron-up"></i>
+              <!-- Rotate cube up on Z-axis -->
+            </a>
+          </div>
+        </div>
+
+        <!-- Banner area with heading, quote, and call-to-action -->
+        <div class="section-1-banner center">
+          <h1>&#8592; Best Gift</h1>
+          <!-- Banner title with left arrow -->
+          <p>“Innovation distinguishes between a leader and a follower.”</p>
+          <!-- Inspirational quote -->
+          <span> - Steve Jobs</span>
+          <!-- Attribution to Steve Jobs -->
+          <button type="button">Buy Now</button>
+          <!-- Call-to-action button -->
+        </div>
+
+        <!-- Placeholder for a slideshow feature -->
+        <div class="slideshow"></div>
+      </section>
+      <!-- End of Section 1 -->
+
+      <!-- Section 2: iPhone 16 showcase -->
+      <section class="section-2" id="section-2">
+        <!-- Heading for iPhone 16 Series section -->
+        <h1 class="section-2-heading">iPhone 16 Series</h1>
+
+        <!-- Container for iPhone 16 model images -->
+        <div class="iphones">
+          <img src="/images/iPhones/iphones-img-1.png" class="iphone-img-1" />
+          <!-- First image of iPhone 16 -->
+          <img src="/images/iPhones/iphones-2-img.png" class="iphone-img-2" />
+          <!-- Second image of iPhone 16 -->
+        </div>
+
+        <!-- Buttons to learn more or to shop for iPhone 16 -->
+        <div class="iphone-btns">
+          <a
+            href="https://www.apple.com/in/iphone-16/"
+            class="iphone-btn center btn-1"
+            ><span>Learn More</span></a
+          >
+          <!-- Link to iPhone 16 details -->
+          <a
+            href="https://www.apple.com/in/iphone-16/"
+            class="iphone-btn center btn-2"
+            ><span>Shop</span></a
+          >
+          <!-- Link to shop page for iPhone 16 -->
+        </div>
+      </section>
+      <!-- End of Section 2 -->
+
+      <!-- Section 3: MacBook Air showcase -->
+      <section class="section-3 center" id="section-3">
+        <!-- Heading for MacBook Air section -->
+        <h1 class="section-3-heading">MacBook Air</h1>
+
+        <!-- Main content area for Section 3, centered -->
+        <div class="section-3-content center">
+          <!-- Images of the MacBook Air -->
+          <img src="images/MacBook/macbook-screen.png" class="macbook-img-1" />
+          <!-- Image of MacBook screen -->
+          <img
+            src="images/MacBook/macbook-keyboard.png"
+            class="macbook-img-2"
+          />
+          <!-- Image of MacBook keyboard -->
+
+          <!-- Loading animation area -->
+          <div class="loading-wrapper">
+            <div class="loading center">
+              <i class="fa-brands fa-apple"></i>
+              <!-- Apple logo for loading effect -->
+              <div class="progress-bar"></div>
+              <!-- Progress bar for visual loading animation -->
+            </div>
+          </div>
+
+          <!-- Information section for the MacBook Air -->
+          <div class="macbook-info">
+            <h2 class="macbook-info-heading">Light. Speed.</h2>
+            <!-- Tagline describing the MacBook Air -->
+            <p class="macbook-price">Starting at $999</p>
+            <!-- Price display for MacBook Air -->
+            <button class="macbook-btn">Buy Now</button>
+            <!-- Button for purchasing MacBook Air -->
+          </div>
+        </div>
+      </section>
+      <!-- End of Section 3 -->
+
+      <!-- Section 4: Watches showcase -->
+      <section class="section-4 center" id="section-4">
+        <!-- Container for Watches -->
+        <div class="watches center">
+          <!-- Watch Bands Gallery -->
+          <div class="watch-bands center">
+            <img src="images/watches/watch-band-1.jpg" class="watch-band-img" />
+            <!-- Watch band image 1 -->
+            <img src="images/watches/watch-band-2.jpg" class="watch-band-img" />
+            <!-- Watch band image 2 -->
+            <img src="images/watches/watch-band-3.jpg" class="watch-band-img" />
+            <!-- Watch band image 3 -->
+            <img src="images/watches/watch-band-4.jpg" class="watch-band-img" />
+            <!-- Watch band image 4 -->
+            <img src="images/watches/watch-band-5.jpg" class="watch-band-img" />
+            <!-- Watch band image 5 -->
+            <img src="images/watches/watch-band-6.jpg" class="watch-band-img" />
+            <!-- Watch band image 6 -->
+            <img src="images/watches/watch-band-7.jpg" class="watch-band-img" />
+            <!-- Watch band image 7 -->
+            <img src="images/watches/watch-band-8.jpg" class="watch-band-img" />
+            <!-- Watch band image 8 -->
+            <img src="images/watches/watch-band-9.jpg" class="watch-band-img" />
+            <!-- Watch band image 9 -->
+          </div>
+          <!-- End of Watch Bands Gallery -->
+
+          <!-- Watch Cases Gallery -->
+          <div class="watch-cases center">
+            <img src="images/watches/watch-case-1.png" class="watch-case-img" />
+            <!-- Watch case image 1 -->
+            <img src="images/watches/watch-case-2.png" class="watch-case-img" />
+            <!-- Watch case image 2 -->
+            <img src="images/watches/watch-case-3.png" class="watch-case-img" />
+            <!-- Watch case image 3 -->
+            <img src="images/watches/watch-case-4.png" class="watch-case-img" />
+            <!-- Watch case image 4 -->
+            <img src="images/watches/watch-case-5.png" class="watch-case-img" />
+            <!-- Watch case image 5 -->
+            <img src="images/watches/watch-case-6.png" class="watch-case-img" />
+            <!-- Watch case image 6 -->
+            <img src="images/watches/watch-case-7.png" class="watch-case-img" />
+            <!-- Watch case image 7 -->
+            <img src="images/watches/watch-case-8.png" class="watch-case-img" />
+            <!-- Watch case image 8 -->
+            <img src="images/watches/watch-case-9.png" class="watch-case-img" />
+            <!-- Watch case image 9 -->
+          </div>
+          <!-- End of Watch Cases Gallery -->
+        </div>
+        <!-- End of Watches Container -->
+
+        <!-- Controls for Navigating Watch Gallery -->
+        <a href="#" class="watch-control watch-top-control center">
+          <i class="fa-solid fa-angles-up"></i>
+          <!-- Control to navigate up -->
+        </a>
+        <a href="#" class="watch-control watch-right-control center">
+          <i class="fa-solid fa-angles-right"></i>
+          <!-- Control to navigate right -->
+        </a>
+        <a href="#" class="watch-control watch-bottom-control center">
+          <i class="fa-solid fa-angles-down"></i>
+          <!-- Control to navigate down -->
+        </a>
+        <a href="#" class="watch-control watch-left-control center">
+          <i class="fa-solid fa-angles-left"></i>
+          <!-- Control to navigate left -->
+        </a>
+        <!-- End of Watch Controls -->
+
+        <!-- Call-to-Action Button for Purchasing Watches -->
+        <button class="watch-btn">Buy Now</button>
+        <!-- Button to purchase watches -->
+        <!-- End of Watch Button -->
+      </section>
+      <!-- End of Section 4 -->
+
+      <!-- Section 5: AirPods showcase -->
+      <section class="section-5 center" id="section-5">
+        <!-- Container for AirPods Content -->
+        <div class="airpods">
+          <!-- Section 5 Heading -->
+          <h1 class="section-5-heading">AirPods</h1>
+          <!-- Heading for the AirPods section -->
+
+          <!-- AirPods Images -->
+          <img src="images/AirPods/airpods-1.png" class="airpods-img-1" />
+          <!-- Image of AirPods model 1 -->
+          <img src="images/AirPods/airpod-2.png" class="airpods-img-2" />
+          <!-- Image of AirPods model 2 -->
+          <!-- End of AirPods Images -->
+
+          <!-- Buttons for AirPods Actions -->
+          <div class="airpods-buttons">
+            <button class="airpods-btn btn-1">Learn More</button>
+            <!-- Button to view more information about AirPods -->
+            <button class="airpods-btn button-2">Buy</button>
+            <!-- Button to purchase AirPods -->
+          </div>
+          <!-- End of Buttons for AirPods Actions -->
+        </div>
+        <!-- End of AirPods Content Container -->
+      </section>
+      <!-- End of Section 5 -->
+
+      <!-- Section 6: Navigation and Footer -->
+      <section class="section-6 center">
+        <!-- Container for Navigation Icons -->
+        <div class="section-6-icons">
+          <!-- Apple logo linking to Section 1 -->
+          <a href="#section-1" class="icon-link">
+            <img src="images/Icons/apple-logo.png" class="icon-1" />
+            <!-- Icon image for Apple logo -->
+          </a>
+
+          <!-- iPhone logo linking to Section 2 -->
+          <a href="#section-2" class="icon-link">
+            <img src="images/Icons/iphone-icon.png" class="icon-2" />
+            <!-- Icon image for iPhone logo -->
+          </a>
+
+          <!-- MacBook logo linking to Section 3 -->
+          <a href="#section-3" class="icon-link">
+            <img src="images/Icons/macbook-icon.png" class="icon-3" />
+            <!-- Icon image for MacBook logo -->
+          </a>
+
+          <!-- Watch logo linking to Section 4 -->
+          <a href="#section-4" class="icon-link">
+            <img src="images/Icons/watch-icon.png" class="icon-4" />
+            <!-- Icon image for Watch logo -->
+          </a>
+
+          <!-- Earphones logo linking to Section 5 -->
+          <a href="#section-5" class="icon-link">
+            <img src="images/Icons/earphone-icon.png" class="icon-5" />
+            <!-- Icon image for Earphone logo -->
+          </a>
+        </div>
+        <!-- End of Navigation Icons Container -->
+
+        <!-- Copyright Text -->
+        <p class="copyright">Copyright &copy; All Rights Reserved</p>
+        <!-- Footer message displaying copyright information -->
+      </section>
+      <!-- End of Section 6 -->
+
+      <!-- End of Main Container -->
+    </div>
+
+    <!-- A link that acts as a button to scroll the page back to the top. It uses an icon for visual indication. -->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="fa-solid fa-up-long"></i>
+    </a>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Linking external JavaScript file -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>

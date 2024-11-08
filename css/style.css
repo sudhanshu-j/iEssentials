@@ -1,0 +1,1391 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"); /* Importing the 'Work Sans' font family from Google Fonts */
+
+/* Common Styles */
+* {
+  margin: 0; /* Remove all margin from all elements */
+  padding: 0; /* Remove all padding from all elements */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  list-style-type: none; /* Remove default list item markers (bullets) from unordered lists */
+  outline: none; /* Remove outline around elements (like focus outlines) */
+  text-decoration: none; /* Remove default text decoration (like underlines) */
+  font-family: "Work Sans", sans-serif; /* Set the default font for the page to 'Work Sans' */
+}
+
+html {
+  font-size: 62.5%; /* Set the base font size to 62.5% of the browser's default font size (10px = 1rem) */
+  scroll-behavior: smooth; /* Enable smooth scrolling when navigating to different parts of the page */
+}
+
+:root {
+  --primary-color: #6edae6; /* Define a custom property for the primary color */
+  --secondary-color: #888686; /* Define a custom property for the secondary color */
+  --white-color: #fff; /* Define a custom property for the white color */
+  --black-color: #000; /* Define a custom property for the black color */
+}
+
+.center {
+  display: flex; /* Use Flexbox to center the content */
+  justify-content: center; /* Align items horizontally to the center */
+  align-items: center; /* Align items vertically to the center */
+}
+
+/* End of Common Styles */
+
+/* Section 1 */
+.section-1 {
+  width: 100%; /* Set the width of the section to 100% of the viewport */
+  height: 100vh; /* Set the height of the section to 100% of the viewport height */
+  background-color: var(
+    --primary-color
+  ); /* Set the background color of the section using the primary color */
+  display: flex; /* Use Flexbox to layout child elements */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-evenly; /* Distribute child elements evenly with space between them */
+  clip-path: polygon(
+    100% 0,
+    100% 95%,
+    38% 100%,
+    0 100%,
+    0 0
+  ); /* Apply a custom clipping path to the section */
+  position: relative; /* Positioning context for child elements */
+}
+
+/* Logo */
+.logo {
+  position: absolute; /* Position the logo absolutely within the section */
+  top: 3rem; /* Position the logo 3rem from the top */
+  left: 3rem; /* Position the logo 3rem from the left */
+}
+
+.logo i {
+  font-size: 10rem; /* Set the font size of the logo icon to 10rem */
+  color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Set the logo color to a semi-transparent black */
+}
+
+/* End of Logo */
+
+/* Navbar */
+.navbar {
+  position: absolute; /* Position the navbar absolutely within the section */
+  top: 3rem; /* Position the navbar 3rem from the top */
+  right: 10%; /* Position the navbar 10% from the right edge of the container */
+}
+
+.navbar-link {
+  font-size: 2rem; /* Set the font size of the navbar links */
+  display: inline-block; /* Make the navbar links inline-block to allow margin and padding */
+  margin: 0 3rem; /* Add horizontal margin of 3rem between each navbar link */
+  color: var(--black-color); /* Set the link color to black */
+  transition: transform 0.5s; /* Add a smooth transformation effect on hover */
+}
+
+.navbar-link:hover {
+  transform: scale(1.5); /* Enlarge the navbar link by 1.5 times when hovered */
+}
+
+/* End of Navbar */
+
+/* Cube */
+.cube-wrapper {
+  perspective: 100rem; /* Apply a 3D perspective to the cube container to give it depth */
+}
+
+.cube {
+  width: 30rem; /* Set the width of the cube */
+  height: 55rem; /* Set the height of the cube */
+  transform-style: preserve-3d; /* Enable 3D transformations for the cube */
+  transform: rotateX(0) rotateY(20deg) rotateZ(0); /* Initial rotation of the cube */
+  position: relative; /* Position the cube relatively inside its container */
+  top: -2rem; /* Shift the cube 2rem upwards */
+  transition: transform 0.5s; /* Add a smooth transformation effect when the cube is rotated */
+}
+
+.front-side,
+.back-side {
+  width: 100%; /* Set both front and back sides to cover 100% of the cube's width */
+  height: 100%; /* Set both front and back sides to cover 100% of the cube's height */
+  background-color: #ffffff; /* Set a white background color for both sides */
+  position: absolute; /* Position both sides absolutely inside the cube */
+  transform-style: preserve-3d; /* Enable 3D transformations for both sides */
+  box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd; /* Apply subtle inner shadow for 3D effect */
+}
+
+.front-side {
+  padding: 2.5rem; /* Add padding inside the front side */
+  transform: translateZ(5rem); /* Move the front side towards the viewer */
+}
+
+.front-side::before,
+.front-side::after {
+  content: ""; /* Add empty content for pseudo-elements */
+  width: 100%; /* Set both pseudo-elements to cover 100% of the front side */
+  height: 10rem; /* Set the height of both pseudo-elements */
+  background-color: #ffffff; /* Set the background color of both pseudo-elements to white */
+  position: absolute; /* Position both pseudo-elements absolutely within the front side */
+  box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd; /* Add inner shadow for 3D effect */
+}
+
+.front-side::before {
+  top: 0; /* Position the before pseudo-element at the top of the front side */
+  left: 0; /* Align the pseudo-element to the left */
+  transform: rotateX(-90deg); /* Rotate the pseudo-element on the X-axis */
+  transform-origin: top; /* Set the origin of rotation to the top edge */
+}
+
+.front-side::after {
+  bottom: 0; /* Position the after pseudo-element at the bottom of the front side */
+  left: 0; /* Align the pseudo-element to the left */
+  transform: rotateX(90deg); /* Rotate the pseudo-element on the X-axis */
+  transform-origin: bottom; /* Set the origin of rotation to the bottom edge */
+}
+
+.front-side img {
+  width: 100%; /* Set the image to cover 100% of the front side */
+  height: 100%; /* Set the image to cover 100% of the front side */
+  object-fit: contain; /* Ensure the image maintains aspect ratio inside the box */
+}
+
+.back-side {
+  transform: translateZ(-5rem); /* Move the back side away from the viewer */
+}
+
+.back-side::before,
+.back-side::after {
+  content: "iPhone"; /* Add the text 'iPhone' inside both pseudo-elements */
+  width: 10rem; /* Set the width of both pseudo-elements */
+  height: 100%; /* Set the height to 100% of the back side */
+  background-color: #ffffff; /* Set a white background color for both pseudo-elements */
+  position: absolute; /* Position both pseudo-elements absolutely within the back side */
+  display: flex; /* Use Flexbox for positioning content inside the pseudo-elements */
+  justify-content: center; /* Align the text horizontally */
+  align-items: center; /* Align the text vertically */
+  font-size: 2rem; /* Set the font size of the text */
+  font-weight: 300; /* Set the font weight to light */
+  color: #ec1919; /* Set the text color to a red shade */
+  box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd; /* Add inner shadow for 3D effect */
+}
+
+.back-side::before {
+  top: 0; /* Position the before pseudo-element at the top */
+  left: 0; /* Align to the left */
+  transform: rotateY(-90deg); /* Rotate the pseudo-element on the Y-axis */
+  transform-origin: left; /* Set the origin of rotation to the left edge */
+}
+
+.back-side::after {
+  top: 0; /* Position the after pseudo-element at the top */
+  right: 0; /* Align to the right */
+  transform: rotateY(90deg); /* Rotate the pseudo-element on the Y-axis */
+  transform-origin: right; /* Set the origin of rotation to the right edge */
+}
+
+.back-side i {
+  font-size: 12rem; /* Set the font size of the icon inside the back side */
+  color: var(--primary-color); /* Set the icon color to the primary color */
+  text-shadow: 0.1rem 0.1rem 0.2rem #aaa, -0.1rem -0.1rem 0.2rem #aaa; /* Add a subtle text shadow for depth */
+  transform: rotateY(180deg); /* Flip the icon around the Y-axis */
+}
+
+/* Controls */
+.controls {
+  position: absolute; /* Position the control buttons absolutely inside the section */
+  bottom: -5rem; /* Position 8rem below the section */
+  left: -20%; /* Position 20% from the left edge */
+  transform: translateX(-50%); /* Center the controls horizontally */
+  width: 10rem; /* Set the width of the control buttons */
+  height: 10rem; /* Set the height of the control buttons */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.9
+  ); /* Set a dark semi-transparent background */
+  border-radius: 50%; /* Make the control buttons circular */
+  border: 1rem solid rgba(0, 0, 0, 0.8); /* Add a border to the controls */
+}
+
+.controls a {
+  position: absolute; /* Position each control button absolutely inside the container */
+}
+
+.controls a:nth-child(1) {
+  top: 0; /* Position the first control at the top */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+}
+
+.controls a:nth-child(2) {
+  bottom: 0; /* Position the second control at the bottom */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+}
+
+.controls a:nth-child(3) {
+  top: 50%; /* Position the third control at the center vertically */
+  left: 0; /* Position it at the left edge */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+.controls a:nth-child(4) {
+  top: 50%; /* Position the fourth control at the center vertically */
+  right: 0; /* Position it at the right edge */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+.controls a:nth-child(5) {
+  top: 10%; /* Position the fifth control slightly near the top */
+  right: 10%; /* Position it near the right edge */
+  transform: rotate(45deg); /* Rotate the button 45 degrees */
+}
+
+.controls a:nth-child(6) {
+  bottom: 10%; /* Position the sixth control slightly near the bottom */
+  left: 10%; /* Position it near the left edge */
+  transform: rotate(45deg); /* Rotate the button 45 degrees */
+}
+
+.controls i {
+  font-size: 1.5rem; /* Set the font size for the icon inside the controls */
+  color: var(--primary-color); /* Set the icon color to the primary color */
+  opacity: 0.5; /* Set the initial opacity to 50% */
+  transition: opacity 0.5s; /* Add a smooth transition effect for opacity */
+}
+
+.controls a:hover i {
+  opacity: 1; /* Increase the opacity to 100% when hovering over the control buttons */
+}
+
+/* End of Controls */
+/* End of Cube */
+
+/* Banner */
+.section-1-banner {
+  flex-direction: column; /* Align the banner content in a column layout */
+}
+
+.section-1-banner h1 {
+  font-size: 12rem; /* Set a large font size for the heading */
+  font-weight: 300; /* Set the font weight to light */
+  text-transform: uppercase; /* Transform the heading text to uppercase */
+  letter-spacing: 0.5rem; /* Add wide spacing between letters */
+}
+
+.section-1-banner p {
+  font-size: 2rem; /* Set a smaller font size for the paragraph text */
+  font-weight: 400; /* Set the font weight to normal */
+  letter-spacing: 0.1rem; /* Add slight letter-spacing for better readability */
+  margin: 6rem 0 4rem 0; /* Add top, bottom, and vertical margins */
+}
+
+.section-1-banner span {
+  font-size: 3rem; /* Set a slightly smaller font size for the span */
+  margin-bottom: 5rem; /* Add a margin to the bottom */
+}
+
+.section-1-banner button {
+  padding: 2rem 4rem; /* Add padding inside the button */
+  font-size: 2rem; /* Set the font size of the button text */
+  background-color: var(--black-color); /* Set the button background to black */
+  color: var(--primary-color); /* Set the text color to the primary color */
+  font-weight: 400; /* Set the font weight to normal */
+  letter-spacing: 0.1rem; /* Add slight letter-spacing */
+  border: none; /* Remove the default border from the button */
+  border-radius: 0.5rem; /* Add rounded corners to the button */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  clip-path: polygon(
+    /* Create a custom polygonal shape for the button */ 50% 0%,
+    /* Top center point of the button. */ 81% 5%,
+    /* Top-right corner of the button. */ 100% 0,
+    /* Top-right corner of the button (at the edge of the button). */ 100% 100%,
+    /* Bottom-right corner of the button. */ 80% 95%,
+    /* Bottom-right point inside the button. */ 50% 100%,
+    /* Bottom center point of the button. */ 20% 95%,
+    /* Bottom-left point inside the button. */ 0 100%,
+    /* Bottom-left corner of the button. */ 0 0,
+    /* Bottom-left corner (start point). */ 23% 5%
+      /* Top-left point inside the button. */
+  );
+  transition: clip-path 0.5s; /* Add a smooth transition when changing the button shape */
+}
+
+/* Section 1 Button Hover */
+.section-1-banner button:hover {
+  /* Apply a polygon clip-path to create a custom shape when the button is hovered */
+  clip-path: polygon(
+    40% 15%,
+    /* Top-left corner of the polygon */ 77% 15%,
+    /* Top-right corner of the polygon */ 100% 10%,
+    /* Right side of the polygon */ 100% 90%,
+    /* Bottom-right corner of the polygon */ 75% 85%,
+    /* Bottom-right corner, slightly left */ 40% 85%,
+    /* Bottom-left corner of the polygon */ 30% 100%,
+    /* Bottom-left corner */ 0 50%,
+    /* Bottom-left side */ 0 50%,
+    /* Bottom-left side again for symmetry */ 30% 0
+      /* Top-left corner of the polygon */
+  );
+}
+
+/* End of Banner */
+
+/* Slideshow */
+.slideshow {
+  /* Ensure the slideshow takes up the full width and height of its container */
+  width: 100%;
+  height: 100%;
+  /* Positioning slideshow absolutely to fill its section */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Place slideshow behind other content */
+  z-index: -1;
+}
+
+.slideshow div {
+  /* Make each image in the slideshow take full width and height */
+  width: 100%;
+  height: 100%;
+  /* Positioning images absolutely within the container */
+  position: absolute;
+  /* Ensuring background images cover the entire container */
+  background-size: cover;
+  /* Centering the background image */
+  background-position: center;
+  /* Preventing background image repetition */
+  background-repeat: no-repeat;
+  /* Set initial opacity to 0 (invisible) */
+  opacity: 0;
+  /* Smooth transition for opacity changes */
+  transition: opacity 5s;
+}
+
+.slideshow div.change {
+  /* Make the current image visible when it has the "change" class */
+  opacity: 1;
+}
+
+/* End of Slideshow */
+
+/* End of Section 1 */
+
+/* Section 2 */
+.section-2 {
+  /* Full width of the section */
+  width: 100%;
+  /* Height set to 120% of the viewport height */
+  height: 120vh;
+  /* Padding from top and bottom to create vertical spacing */
+  padding: 10vh 0;
+  /* Use Flexbox to center content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Section 2 Heading */
+.section-2-heading {
+  /* Large font size for the heading */
+  font-size: 10rem;
+  /* Light font weight */
+  font-weight: 200;
+  /* Set the text color */
+  color: var(--black-color);
+  /* Positioning the heading relative for positioning pseudo-elements */
+  position: relative;
+  /* Space below the heading */
+  margin-bottom: 5rem;
+}
+
+.section-2-heading::before {
+  /* Create a pseudo-element for a diagonal background */
+  content: "";
+  /* Size of the background (larger than the heading) */
+  width: 130%;
+  height: 30vw;
+  /* Apply a gradient background */
+  background-image: linear-gradient(var(--primary-color), var(--white-color));
+  /* Absolute positioning to place the background behind the heading */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Skew the background element to create a diagonal effect */
+  transform: skewX(-50deg);
+  /* Skew the background element from the top-left corner */
+  transform-origin: left top;
+  /* Place it behind the heading */
+  z-index: -1;
+  /* Rounded corners for the background */
+  border-radius: 1rem;
+}
+
+/* End of Section 2 Heading */
+
+/* Section 2 Images */
+.iphones {
+  /* Set the size of the image container */
+  height: 60vh;
+  width: 60vw;
+  /* Apply a gradient background */
+  background-image: linear-gradient(var(--primary-color), var(--white-color));
+  /* Round the corners of the container */
+  border-radius: 0.5rem;
+}
+
+.iphones img {
+  /* Ensure the image takes full width and height */
+  width: inherit;
+  height: inherit;
+  /* Preserve the image aspect ratio */
+  object-fit: contain;
+  /* Positioning images absolutely within the container */
+  position: absolute;
+  /* Transition effect for opacity changes */
+  transition: opacity 3s;
+}
+
+.iphone-img-2 {
+  /* Initially hide the second image */
+  opacity: 0;
+}
+
+/* Hover effect: hide the first image */
+.iphones:hover .iphone-img-1 {
+  opacity: 0;
+}
+
+/* Hover effect: show the second image */
+.iphones:hover .iphone-img-2 {
+  opacity: 1;
+}
+
+/* End of Section 2 Images */
+
+/* Section 2 Buttons */
+.iphone-btns {
+  /* Display buttons in a row */
+  display: flex;
+}
+
+.iphone-btn {
+  /* Set the size of each button */
+  width: 6rem;
+  height: 6rem;
+  /* Apply a gradient background */
+  background-image: linear-gradient(
+    to right,
+    rgb(51, 51, 51) 60%,
+    /* Dark gray color */ rgb(82, 82, 82) /* Lighter gray */
+  );
+  /* Add horizontal spacing between buttons */
+  margin: 0 3rem;
+  /* Make the buttons circular */
+  border-radius: 50%;
+  /* Position buttons relative for pseudo-element positioning */
+  position: relative;
+}
+
+.iphone-btn::after {
+  /* Create a border inside the button */
+  content: "";
+  width: 50%;
+  height: 50%;
+  display: block;
+  border: 0.1rem solid #6edae6;
+  /* Round the inner border corners */
+  border-radius: 1rem;
+}
+
+.iphone-btn span {
+  /* Position the text above the button */
+  position: absolute;
+  top: -3rem;
+  /* Font styling for the text */
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--primary-color);
+  /* Ensure the text takes up the smallest space */
+  width: max-content;
+  /* Initially hide the text */
+  transform: scale(0);
+  /* Smooth transition for the text's scale change */
+  transition: transform 0.5s;
+}
+
+.iphone-btn:hover span {
+  /* Show the text when the button is hovered */
+  transform: scale(1);
+}
+
+/* End of Section 2 Buttons */
+/* End of Section 2 */
+
+/* Section 3 */
+.section-3 {
+  /* Full width and height */
+  width: 100%;
+  height: 100%;
+  /* Set background color to black */
+  background-color: var(--black-color);
+  /* Use Flexbox for column layout */
+  flex-direction: column;
+  /* Add padding top and bottom */
+  padding: 15rem 0;
+  /* Apply a custom clip-path for a diagonal shape */
+  clip-path: polygon(68% 0, 100% 0, 100% 97%, 38% 100%, 0 100%, 0 3%);
+}
+
+/* Section 3 Heading */
+.section-3-heading {
+  /* Large font size for the heading */
+  font-size: 10rem;
+  /* Light font weight */
+  font-weight: 200;
+  /* Set text color */
+  color: var(--primary-color);
+  /* Space below the heading */
+  margin-bottom: 15rem;
+}
+
+/* End of Section 3 Heading */
+
+/* Section 3 Content */
+.section-3-content {
+  /* 80% width of the parent container */
+  width: 80%;
+  /* Flexbox column layout */
+  flex-direction: column;
+  /* Add large perspective for 3D effect */
+  perspective: 1000rem;
+  /* Position relative for children to be positioned within */
+  position: relative;
+}
+
+/* Section 3 Images */
+.section-3-content img {
+  /* Ensure the image takes up full width */
+  width: inherit;
+}
+
+.macbook-img-1 {
+  /* Apply 3D rotation for the first image */
+  transform: rotateX(-80deg);
+  /* Rotation origin is from the bottom of the image */
+  transform-origin: bottom;
+}
+
+.change .macbook-img-1 {
+  /* When the class 'change' is added, rotate the image back to 0 degrees */
+  transform: rotateX(0);
+  transition: transform 3s;
+}
+
+/* End of Section 3 Images */
+
+/* Section 3 Loading */
+.loading-wrapper {
+  /* Positioned absolute for the loading animation */
+  position: absolute;
+  top: 6%;
+  width: 60%;
+  height: 85%;
+  /* Apply a linear gradient overlay and background image */
+  background: linear-gradient(
+      rgba(62, 62, 62, 0.6),
+      /* Light fade effect */ rgba(16, 16, 16, 0.6)
+    ),
+    url(/images/MacBook/bg.jpg);
+
+  background-size: cover;
+  /* Center the background image */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Layer the wrapper behind other content */
+  z-index: -1;
+  /* Initially hide the wrapper */
+  opacity: 0;
+}
+
+.change .loading-wrapper {
+  /* Show the wrapper when the class 'change' is added */
+  opacity: 1;
+  transition: opacity 1s 2s;
+}
+
+.loading {
+  /* Full width and height for the loading container */
+  width: 100%;
+  height: 100%;
+  /* Position the loading container absolutely */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Black background color for the loading section */
+  background-color: var(--black-color);
+  /* Flexbox for column layout */
+  flex-direction: column;
+}
+
+.change .loading {
+  /* Fade out the loading container when the class 'change' is added */
+  opacity: 0;
+  transition: 1s 5s;
+}
+
+.loading i {
+  /* Large font size for the loading icon */
+  font-size: 10rem;
+  /* White color for the icon */
+  color: var(--white-color);
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  /* Set width and height for the progress bar */
+  width: 22rem;
+  height: 0.3rem;
+  /* Set background color for the progress bar */
+  background-color: #888;
+  /* Round the corners of the progress bar */
+  border-radius: 5rem;
+  position: relative;
+}
+
+.progress-bar::after {
+  /* Create a white filling for the progress bar */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--white-color);
+}
+
+.change .progress-bar::after {
+  /* Fill the progress bar when the class 'change' is added */
+  width: 100%;
+  transition: width 1s 3s;
+}
+
+/* End of Section 3 Loading */
+
+/* Section 3 Info */
+.macbook-info {
+  /* Absolute positioning of the info text */
+  position: absolute;
+  width: 70rem;
+  /* Center the text */
+  text-align: center;
+  /* Initially hide the info */
+  opacity: 0;
+}
+
+.change .macbook-info {
+  /* Show the info text when the class 'change' is added */
+  opacity: 1;
+  transition: opacity 1s 6s;
+}
+
+.macbook-info-heading {
+  /* Large font size for the heading */
+  font-size: 6rem;
+  font-weight: 400;
+  /* Set the color of the heading */
+  color: var(--primary-color);
+}
+
+.macbook-price {
+  /* Medium font size for the price text */
+  font-size: 2.5rem;
+  font-weight: 200;
+  /* Add vertical spacing */
+  margin: 3rem 0;
+  /* Add a color for the price text */
+  color: #fff;
+}
+
+.macbook-btn {
+  /* Set the size of the button */
+  width: 15rem;
+  height: 4rem;
+  /* Apply a gradient background for the button */
+  background-image: linear-gradient(#6363637f, #14141488);
+  /* Remove the default button border */
+  border: none;
+  /* Round the corners of the button */
+  border-radius: 0.5rem;
+  /* Medium font size for button text */
+  font-size: 1.8rem;
+  font-weight: 500;
+  /* Add letter-spacing to button text */
+  letter-spacing: 0.2rem;
+  /* Set the button text color */
+  color: var(--primary-color);
+  /* Change cursor to pointer when hovering over the button */
+  cursor: pointer;
+  /* Add transition effect for button hover */
+  transition: all 0.3s;
+}
+
+.macbook-btn:focus {
+  /* Add a light shadow effect to the button when focused */
+  box-shadow: 0 0 10px 0.2rem var(--primary-color);
+}
+
+.macbook-btn:hover {
+  /* Change the background color when hovering over the button */
+  background-image: linear-gradient(#63636399, #14141499);
+}
+
+/* End of Section 3 Info */
+
+/* End of Section 3 Content */
+
+/*End of Section 3 */
+
+/* Section 4 */
+.section-4 {
+  /* Set the height to 140% of the viewport height */
+  height: 140vh;
+  /* Add vertical padding of 20% of the viewport height */
+  padding: 20vh 0;
+  /* Arrange content in a column using Flexbox */
+  flex-direction: column;
+  /* Position section relative for absolute positioning of children */
+  position: relative;
+}
+
+/* Section 4 Watches */
+.watches {
+  /* Position relative for child elements to be absolutely positioned */
+  position: relative;
+  /* Full width and height of the container */
+  width: 100%;
+  height: 100%;
+  /* Hide overflow content that exceeds the container bounds */
+  overflow: hidden;
+}
+
+.watches > div {
+  /* Position child divs absolutely within the container */
+  position: absolute;
+}
+
+/* Watch Bands */
+.watch-bands {
+  /* Smooth transition for right margin */
+  transition: margin-right 1s;
+}
+
+.watch-band-img {
+  /* Set the width and height of the watch band image */
+  width: 35rem;
+  height: 35rem;
+  /* Ensure the image is contained without distortion */
+  object-fit: contain;
+}
+
+/* End of Watch Bands */
+
+/* Watch Cases */
+.watch-cases {
+  /* Arrange watch cases in a column */
+  flex-direction: column;
+  /* Smooth transition for top margin */
+  transition: margin-top 1s;
+}
+
+.watch-case-img {
+  /* Set the size of the watch case image */
+  width: 35rem;
+  height: 35rem;
+  /* Ensure the image is contained without distortion */
+  object-fit: contain;
+}
+
+/* End of Watch Cases */
+/* End of Section 4 Watches */
+
+/* Watch Controls */
+.watch-control {
+  /* Position the control buttons absolutely */
+  position: absolute;
+  /* Set width and height of the controls */
+  width: 4rem;
+  height: 4rem;
+  /* Semi-transparent background color */
+  background-color: rgba(221, 221, 221, 0.4);
+  /* Round the corners to create circular controls */
+  border-radius: 5rem;
+}
+
+.hideControl {
+  /* Hide the control with zero opacity and visibility */
+  opacity: 0;
+  visibility: hidden;
+}
+
+.watch-control i {
+  /* Set the icon size inside the control */
+  font-size: 3rem;
+  /* Set the icon color */
+  color: var(--primary-color);
+}
+
+/* Control positions */
+.watch-top-control {
+  /* Position the top control button at 22vh from the top */
+  top: 22vh;
+  /* Center horizontally using 50% left and translation */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.watch-right-control {
+  /* Position the right control button at the center vertically */
+  top: 50%;
+  /* Position the button 2rem from the right */
+  right: 2rem;
+  /* Center vertically */
+  transform: translateY(-50%);
+}
+
+.watch-bottom-control {
+  /* Position the bottom control button 20vh from the bottom */
+  left: 50%;
+  bottom: 20vh;
+  /* Center horizontally */
+  transform: translateX(-50%);
+}
+
+.watch-left-control {
+  /* Position the left control button at the center vertically */
+  top: 50%;
+  /* Position the button 2rem from the left */
+  left: 2rem;
+  /* Center vertically */
+  transform: translateY(-50%);
+}
+
+/* End of Watch Controls */
+
+/* Watch Button */
+.watch-btn {
+  /* Position the button at the bottom with relative positioning */
+  position: absolute;
+  /* Place the button 30vh from the bottom */
+  bottom: 24vh;
+  /* Place the button 35% from the right */
+  right: 30%;
+  /* Set width and height of the button */
+  width: 14rem;
+  height: 5rem;
+  /* Black background for the button */
+  background-color: var(--black-color);
+  /* Set the text color */
+  color: var(--primary-color);
+  /* Remove default button border */
+  border: none;
+  /* Rounded corners for the button */
+  border-radius: 4rem;
+  /* Font styling for the button */
+  font-size: 2rem;
+  font-weight: 400;
+  /* Change cursor to pointer on hover */
+  cursor: pointer;
+  /* Smooth transition for button hover effect */
+  transition: all 0.3s;
+}
+
+/* Hover effect for the watch button */
+.watch-btn:hover {
+  /* Change background color */
+  background-color: var(--primary-color);
+  /* Change text color */
+  color: var(--black-color);
+}
+
+/* End of Watch Button */
+/* End of Section 4 */
+
+/* Section 5 */
+.section-5 {
+  /* Full width and height of the viewport */
+  width: 100%;
+  height: 100vh;
+}
+
+/* Section 5 Content */
+.airpods {
+  /* Set width and height for the AirPods container */
+  width: 90%;
+  height: 80%;
+  /* Use Flexbox for content arrangement */
+  display: flex;
+  /* Position the container relative */
+  position: relative;
+}
+
+/* Section 5 Heading */
+.section-5-heading {
+  /* Position the heading absolutely at the top-left of the container */
+  position: absolute;
+  top: 0;
+  left: 60%;
+  /* Center the heading horizontally */
+  transform: translateX(-50%);
+  /* Large font size for the heading */
+  font-size: 15rem;
+  font-weight: 300;
+  /* Set text color */
+  color: var(--secondary-color);
+  /* Add text shadow for better readability */
+  text-shadow: 0.1rem 0.1rem 0 #999;
+
+  z-index: 2;
+}
+
+/* End of Section 5 Heading */
+
+/* Section 5 Images */
+.airpods img {
+  /* Set image width and height */
+  width: 50%;
+  height: 100%;
+  /* Ensure image maintains aspect ratio */
+  object-fit: contain;
+}
+
+.airpods-img-2 {
+  /* Set background color for the second AirPods image */
+  background-color: var(--primary-color);
+}
+
+/* End of Section 5 Images */
+
+/* Section 5 Buttons */
+.airpods-buttons {
+  /* Position the buttons in the center of the container */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Center the buttons vertically and horizontally */
+  transform: translate(-50%, -50%);
+  /* Add some space above the buttons */
+  margin-top: 5rem;
+}
+
+.airpods-btn {
+  /* Set button size */
+  width: 12rem;
+  height: 4rem;
+  /* Primary color background for the button */
+  background-color: var(--primary-color);
+  /* Horizontal margin between buttons */
+  margin: 0 2rem;
+  /* Remove border */
+  border: none;
+  /* Font size for the button */
+  font-size: 1.5rem;
+  /* Rounded corners */
+  border-radius: 0.5rem;
+  /* White text for the button */
+  color: var(--white-color);
+  /* Pointer cursor on hover */
+  cursor: pointer;
+  /* Smooth transition for button hover effect */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the airpods buttons */
+.airpods-btn:hover {
+  /* Change background color on hover */
+  background-color: var(--secondary-color);
+  /* Change text color on hover */
+  color: var(--white-color);
+}
+
+.airpods-btn:last-child {
+  /* Set different background and text color for the last button */
+  background-color: var(--white-color);
+  color: var(--primary-color);
+
+  /* Change cursor to pointer on hover */
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
+  transition: all 0.3s ease;
+}
+
+.airpods-btn:hover:last-child {
+  /* Change background color on hover */
+  background-color: var(--secondary-color);
+  /* Change text color on hover */
+  color: var(--white-color);
+  /* Change cursor to pointer on hover */
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
+  transition: all 0.3s ease;
+}
+
+/* End of Section 5 Buttons */
+/* End of Section 5 Content */
+/* End of Section 5 */
+
+/* Section 6 */
+.section-6 {
+  /* Set height to 40% of the viewport height */
+  width: 100%;
+  height: 40vh;
+  /* Position relative to contain absolute positioned children */
+  position: relative;
+}
+
+.icon-link {
+  /* Horizontal margin between icon links */
+  margin: 0 5rem;
+}
+
+.icon-link img {
+  /* Set width of the icon images */
+  width: 8rem;
+  /* Add drop shadow for better visual effect */
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
+}
+
+.icon-link .icon-2 {
+  /* Set width of the icon images */
+  width: 11rem;
+}
+
+.icon-link .icon-4 {
+  /* Set width of the icon images */
+  width: 6.5rem;
+}
+
+.copyright {
+  /* Position copyright text at the bottom */
+  position: absolute;
+  bottom: 5rem;
+  /* Font size and letter-spacing for copyright text */
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+/* End of Section 6 */
+
+/* ScrollUp Btn */
+
+.scrollup {
+  position: fixed; /* Fixed position on screen */
+  right: 1rem; /* Offset from right */
+  bottom: -30%; /* Off-screen initially */
+  background-color: var(--secondary-color); /* Background color */
+  backdrop-filter: blur(16px); /* Blur effect */
+  -webkit-backdrop-filter: blur(16px); /* Webkit support for blur */
+  display: inline-flex; /* Inline-flex for button */
+  padding: 10px; /* Padding for scroll up button */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 1.15rem; /* Font size */
+  color: #000; /* Text color */
+  z-index: 10; /* Stack above other elements */
+  transition: 0.6s; /* Transition duration */
+}
+
+.scrollup i {
+  font-size: 1.8rem; /* Icon font size */
+}
+
+.scrollup:hover {
+  transform: translateY(-0.25rem); /* Lift effect on hover */
+  background-color: var(--primary-color); /* Change background on hover */
+}
+
+/* Show Scroll Up */
+.show-scroll {
+  bottom: 3rem; /* Position on screen when shown */
+}
+
+/* End of Scroll Up */
+
+/* Responsive */
+
+/* For screen widths up to 1500px */
+@media (max-width: 1500px) {
+  /* Set the base font size to 45% for smaller screens */
+  html {
+    font-size: 45%;
+  }
+}
+
+/* For screen widths up to 1100px */
+@media (max-width: 1100px) {
+  /* Set the base font size to 40% for smaller screens */
+  html {
+    font-size: 40%;
+  }
+
+  /* Make navbar links bold */
+  .navbar-link {
+    font-weight: 700;
+  }
+
+  /* Decrease the font size of the heading in the banner */
+  .section-1-banner h1 {
+    font-size: 8rem;
+  }
+
+  /* Decrease the font size of the paragraph in the banner */
+  .section-1-banner p {
+    font-size: 3rem;
+  }
+
+  /* Adjust position of the watch button */
+  .watch-btn {
+    right: 25%;
+  }
+}
+
+/* For screen widths up to 900px */
+@media (max-width: 900px) {
+  /* Make section-3-content occupy 90% of its width */
+  .section-3-content {
+    width: 90%;
+  }
+
+  /* Decrease width of loading wrapper */
+  .loading-wrapper {
+    width: 70%;
+  }
+
+  /* Decrease font size of the loading icon */
+  .loading i {
+    font-size: 6rem;
+  }
+
+  /* Decrease font size of section-5 heading */
+  .section-5-heading {
+    font-size: 12rem;
+  }
+}
+
+/* For screen widths up to 700px */
+@media (max-width: 700px) {
+  /* Position the logo at the top left with some spacing */
+  .logo {
+    top: 0;
+    left: 2rem;
+  }
+
+  /* Decrease font size of the logo icon */
+  .logo i {
+    font-size: 8rem;
+  }
+
+  /* Hide the controls on small screens */
+  .controls {
+    display: none;
+  }
+
+  /* Decrease opacity of the cube wrapper */
+  .cube-wrapper {
+    opacity: 0.7;
+  }
+
+  /* Adjust position of the cube */
+  .cube {
+    top: 3rem;
+  }
+
+  /* Make section-1-banner position absolute */
+  .section-1-banner {
+    position: absolute;
+  }
+
+  /* Move the heading in section-1-banner slightly to the left */
+  .section-1-banner h1 {
+    position: relative;
+    left: -5rem;
+  }
+
+  /* Hide the first letter of the heading */
+  .section-1-banner h1::first-letter {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  /* Change hover effect of the button in the banner */
+  .section-1-banner button:hover {
+    clip-path: polygon(
+      50% 0%,
+      81% 5%,
+      100% 0,
+      100% 100%,
+      80% 95%,
+      50% 100%,
+      20% 95%,
+      0 100%,
+      0 0,
+      23% 5%
+    );
+  }
+
+  .section-2-heading::before {
+    width: 100%;
+  }
+
+  /* Adjust the iPhone size */
+  .iphones {
+    height: 70vh;
+    width: 70vw;
+  }
+
+  /* Adjust position of the watch button */
+  .watch-btn {
+    right: 15%;
+  }
+
+  /* Hide the first AirPods image */
+  .airpods-img-1 {
+    display: none;
+  }
+
+  /* Make the second AirPods image take 100% width */
+  .airpods .airpods-img-2 {
+    width: 100%;
+  }
+
+  /* Style the AirPods buttons */
+  .airpods-btn {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    box-shadow: 0.1rem 0.1rem 0.1rem #ddd;
+  }
+
+  /* Adjust margin for icon links */
+  .icon-link {
+    margin: 0 2rem;
+  }
+}
+
+/* For screen widths up to 550px */
+@media (max-width: 550px) {
+  /* Adjust the margin of navbar links */
+  .navbar-link {
+    margin: 0 1.5rem;
+  }
+
+  /* Decrease the font size of section-2 heading */
+  .section-2-heading {
+    font-size: 8rem;
+  }
+
+  /* Decrease the font size of section-3 heading */
+  .section-3-heading {
+    font-size: 8rem;
+  }
+
+  /* Decrease the font size of the MacBook info heading */
+  .macbook-info-heading {
+    font-size: 5rem;
+  }
+
+  /* Adjust size of MacBook button */
+  .macbook-btn {
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+
+  /* Adjust button layout and width for AirPods */
+  .airpods-buttons {
+    width: 50rem;
+    text-align: center;
+  }
+
+  /* Adjust icon link image size */
+  .icon-link img {
+    width: 8rem;
+  }
+}
+
+/* For screen widths up to 450px */
+@media (max-width: 450px) {
+  /* Set the base font size to 35% for very small screens */
+  html {
+    font-size: 35%;
+  }
+
+  /* Center logo at the top */
+  .logo {
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Center navbar at the top */
+  .navbar {
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+  }
+
+  /* Center-align the paragraph in the banner */
+  .section-1-banner p {
+    text-align: center;
+  }
+
+  /* Adjust iPhone image size */
+  .iphones {
+    width: 75vw;
+  }
+
+  /* Decrease font size of section-3 heading */
+  .section-3-heading {
+    font-size: 6rem;
+  }
+
+  /* Decrease width of MacBook info section */
+  .macbook-info {
+    width: 40rem;
+  }
+
+  /* Decrease font size of MacBook info heading */
+  .macbook-info-heading {
+    font-size: 3rem;
+  }
+
+  /* Adjust MacBook price font size */
+  .macbook-price {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  /* Adjust position of watch button */
+  .watch-btn {
+    right: 5%;
+  }
+
+  /* Adjust icon link image size */
+  .icon-link img {
+    width: 6rem;
+  }
+}
+
+/* For screen widths up to 350px */
+@media (max-width: 350px) {
+  .section-2-heading::before {
+    width: 100%;
+  }
+}
+
+/* End of Responsive */
