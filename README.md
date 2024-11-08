@@ -27,7 +27,7 @@ iEssentials is a sleek and modern Apple clone website built using HTML, CSS, Jav
 
 - [Contact](#contact)
 
----
+
 
 ## Features
 
@@ -55,7 +55,7 @@ iEssentials is a sleek and modern Apple clone website built using HTML, CSS, Jav
 
   - Scroll-based animations are used throughout the website to enhance user experience and create dynamic visual effects as the user scrolls down the page.
 
----
+
 
 ## Technologies Used
 
@@ -67,7 +67,7 @@ iEssentials is a sleek and modern Apple clone website built using HTML, CSS, Jav
 
 - **ScrollReveal.js**: Library used for scroll animations to make the website more engaging as the user scrolls.
 
----
+
 
 ## Setup and Installation
 
