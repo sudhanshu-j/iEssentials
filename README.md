@@ -82,8 +82,58 @@ To run this project locally, follow these steps:
 
    - Alternatively, you can serve the website using a simple HTTP server (e.g., using VS Code’s Live Server extension, or Python's HTTP server):
 
-     - **For Python 3.x, run:
+     - **For Python 3.x, run:**
        ```bash
        python -m http.server
        ```
-     - Navigate to http://localhost:8000 in your browser.
+     - **Navigate to http://localhost:8000 in your browser.**
+
+## Features Breakdown
+
+1. **3D iPhone Box Model**
+   - A 3D model of an iPhone box rotates automatically and can be controlled by the user.
+   - The user can adjust the rotation angle to any degree using UI controls (such as buttons or sliders).
+
+2. **New iPhone Series Section**
+   - A visually appealing display of the latest iPhone models, designed with responsive images and clean typography.
+
+3. **MacBook Animation**
+   - A loading effect is applied to the MacBook image, combined with animations that trigger when scrolling to this section.
+   - This section is animated using CSS and JavaScript to provide a smooth, engaging visual effect.
+
+4. **Apple Watch Section**
+   - A dedicated section to showcase Apple Watches, with images and animations that bring the product to life on the page.
+
+5. **AirPods Section**
+   - Displays images and descriptions of the latest AirPods, presented with smooth animations as the user scrolls through the website.
+
+6. **Footer Section**
+   - Contains footer links, credits, and other relevant information.
+
+## ScrollReveal Animations
+
+The **ScrollReveal.js** library is used to animate various elements as they come into view when the user scrolls. These animations help enhance the user experience by providing engaging transitions and effects. Each section has specific animations applied based on the scroll position.
+
+### Examples of Animations:
+
+- **Fade-in effects** for images.
+- **Slide-in effects** for text content.
+- **Custom animations** for the 3D iPhone box and other sections.
+
+You can customize the animations by editing the ScrollReveal configuration in the JavaScript file.
+
+## Customizing
+
+You can easily customize this website to fit your needs. Here are some of the key areas you might want to modify:
+
+1. **3D iPhone Model:**
+- You can replace the 3D model with a different object or update the textures by modifying the Three.js code (if used).
+
+2. **Section Content:**
+- Update the images, text, and other media for the different product sections (iPhone, MacBook, Apple Watch, AirPods).
+
+3. **Animations:**
+- You can tweak the ScrollReveal animations by adjusting the configuration (duration, delay, easing, etc.).
+
+### 4. Styling:
+- Modify the CSS styles to fit your branding and layout preferences.
